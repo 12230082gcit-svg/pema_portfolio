@@ -1,0 +1,120 @@
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logoloop--vertical {
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logoloop__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.logoloop--vertical .logoloop__track {
+  flex-direction: column;
+  width: 100%;
+  height: max-content;
+}
+
+.logoloop__list {
+  display: flex;
+  align-items: center;
+  gap: var(--logoloop-gap, 32px);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-right: var(--logoloop-gap, 32px);
+}
+
+.logoloop--vertical .logoloop__list {
+  flex-direction: column;
+  padding-right: 0;
+  padding-bottom: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--logoloop-logoHeight, 28px);
+}
+
+.logoloop__item img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.logoloop__node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.logoloop--fade::before,
+.logoloop--fade::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(to right, var(--logoloop-fadeColor, white), transparent);
+}
+
+.logoloop--horizontal.logoloop--fade::before {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+}
+
+.logoloop--horizontal.logoloop--fade::after {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 15%;
+  transform: rotate(180deg);
+}
+
+.logoloop--vertical.logoloop--fade::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  background: linear-gradient(to bottom, var(--logoloop-fadeColor, white), transparent);
+}
+
+.logoloop--vertical.logoloop--fade::after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  background: linear-gradient(to top, var(--logoloop-fadeColor, white), transparent);
+}
+
+.logoloop--scale-hover .logoloop__item {
+  transition: transform 0.3s ease;
+}
+
+.logoloop--scale-hover .logoloop__item:hover {
+  transform: scale(1.1);
+}
