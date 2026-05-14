@@ -205,18 +205,20 @@ export default function ProjectDetails({ projects, GlassButton, fadeIn }: Projec
         </motion.div>
       </div>
 
-      {/* Video Section for Duty Free */}
+            {/* Video Section for Duty Free */}
       {isDutyFree && (
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-40">
           <div className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
-            <iframe
-              src="https://drive.google.com/file/d/1ly0CbobL0-aUTAOJspDwWrwrR1Q9EVmW/preview"
-              width="100%"
-              height="100%"
-              allow="autoplay"
-              className="border-none"
-              title="Seamless Duty Free Video"
-            ></iframe>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            >
+              <source src="/dutyfree.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       )}
@@ -225,14 +227,16 @@ export default function ProjectDetails({ projects, GlassButton, fadeIn }: Projec
       {isUnravel && (
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-40">
           <div className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
-            <iframe
-              src="https://drive.google.com/file/d/15pwZwAlfCMfc3WpkTFq5X21QDF93bVxt/preview"
-              width="100%"
-              height="100%"
-              allow="autoplay"
-              className="border-none"
-              title="History Unravelled Video"
-            ></iframe>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            >
+              <source src="/unravel.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       )}
@@ -241,14 +245,16 @@ export default function ProjectDetails({ projects, GlassButton, fadeIn }: Projec
       {isRenting && (
         <div className="max-w-7xl mx-auto px-6 md:px-20 mb-40">
           <div className="aspect-video w-full rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
-            <iframe
-              src="https://drive.google.com/file/d/1_6ao4vp5meHLCeLjA91nocfE1Gi2mf5Z/preview"
-              width="100%"
-              height="100%"
-              allow="autoplay"
-              className="border-none"
-              title="Effortless Renting Video"
-            ></iframe>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="w-full h-full object-cover"
+            >
+              <source src="/renting.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       )}

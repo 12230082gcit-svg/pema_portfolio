@@ -18,6 +18,7 @@ import Home from "@/src/pages/Home";
 import ProjectsPage from "@/src/pages/ProjectsPage";
 import ProjectDetails from "@/src/pages/ProjectDetails";
 import About from "@/src/pages/About";
+import ContactModal from "./components/ContactModal";
 
 function GlassButton({ children, className = "", ...props }: any) {
   return (
