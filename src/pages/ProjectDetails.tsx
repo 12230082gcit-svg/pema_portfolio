@@ -253,7 +253,7 @@ export default function ProjectDetails({ projects, GlassButton, fadeIn }: Projec
               preload="auto"
               className="w-full h-full object-cover"
             >
-              <source src="/renting.mp4" type="video/mp4" />
+              <source src="/rentease.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
