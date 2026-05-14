@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App.tsx";
 import "./index.css";
 import { initGA } from "./analytics";
-import { initClarity } from "./lib/analytics";
+import { initClarity } from "./analytics";
 
 initGA();
 initClarity();
